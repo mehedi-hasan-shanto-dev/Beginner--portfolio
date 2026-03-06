@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MH Shanto Portfolio</title>
+    <!-- fontawesome cdn  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- Tailwind + DaisyUI -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link
@@ -60,8 +68,26 @@
     <!-- Skills Section -->
     <section id="skills" class="p-10 bg-base-100">
       <h2 class="text-3xl font-bold mb-4">Skills</h2>
-      <div id="skillsList" class="grid grid-cols-2 md:grid-cols-3 gap-4"></div>
-      <button id="addSkillBtn" class="btn btn-primary mt-4">Add Skill</button>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="flex items-center gap-2 badge badge-accent p-4">
+          <i class="fa-brands fa-html5 text-orange-600 text-xl"></i> HTML
+        </div>
+        <div class="flex items-center gap-2 badge badge-secondary p-4">
+          <i class="fa-brands fa-css3-alt text-blue-600 text-xl"></i> CSS
+        </div>
+        <div class="flex items-center gap-2 badge badge-warning p-4">
+          <i class="fa-brands fa-js text-yellow-500 text-xl"></i> JavaScript
+        </div>
+        <div class="flex items-center gap-2 badge badge-info p-4">
+          <i class="fa-brands fa-react text-cyan-400 text-xl"></i> React
+        </div>
+        <div class="flex items-center gap-2 badge badge-success p-4">
+          <i class="fa-brands fa-node-js text-green-600 text-xl"></i> Node.js
+        </div>
+        <div class="flex items-center gap-2 badge badge-primary p-4">
+          <i class="fa-solid fa-database text-green-700 text-xl"></i> MongoDB
+        </div>
+      </div>
     </section>
 
     <!-- Projects Section -->
@@ -119,7 +145,7 @@
             <p>Personal portfolio showcasing my work.</p>
             <div class="card-actions justify-end">
               <a
-                href="https://github.com/mehedi-hasan-shanto-dev"
+                href=" https://mehedi-hasan-shanto-dev.github.io/Beginner--portfolio/"
                 target="_blank"
                 class="btn btn-primary"
                 >View Project</a
@@ -146,8 +172,44 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer footer-center p-4 bg-base-300 text-base-content">
-      <p>© 2026 MH Shanto | Built with ❤️ using Tailwind, DaisyUI & DOM API</p>
+    <footer class="footer footer-center p-6 bg-base-300 text-base-content">
+      <div class="flex gap-6">
+        <!-- Facebook -->
+        <a
+          href="https://www.facebook.com/mehedi.hasan.shanto.dev"
+          target="_blank"
+          class="btn btn-circle btn-outline"
+        >
+          <i class="fa-brands fa-facebook-f text-blue-600 text-xl"></i>
+        </a>
+        <!-- X (Twitter) -->
+        <a
+          href="https://x.com/mhshanto8989"
+          target="_blank"
+          class="btn btn-circle btn-outline"
+        >
+          <i class="fa-brands fa-x-twitter text-black text-xl"></i>
+        </a>
+        <!-- LinkedIn -->
+        <a
+          href="https://www.linkedin.com/in/mehedi-hasan-shanto-dev/"
+          target="_blank"
+          class="btn btn-circle btn-outline"
+        >
+          <i class="fa-brands fa-linkedin-in text-blue-700 text-xl"></i>
+        </a>
+        <!-- GitHub -->
+        <a
+          href="https://github.com/mehedi-hasan-shanto-dev"
+          target="_blank"
+          class="btn btn-circle btn-outline"
+        >
+          <i class="fa-brands fa-github text-gray-800 text-xl"></i>
+        </a>
+      </div>
+      <p class="mt-4">
+        © 2026 MH Shanto | Built with ❤️ using Tailwind & DaisyUI
+      </p>
     </footer>
 
     <script src="script.js"></script>

@@ -76,3 +76,42 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// Add Skill button functionality
+document.addEventListener("DOMContentLoaded", () => {
+  const addSkillBtn = document.querySelector("#addSkillBtn");
+  const skillsGrid = document.querySelector("#skillsGrid");
+
+  // Skill → Icon mapping
+  const skillIcons = {
+    HTML: '<i class="fa-brands fa-html5 text-orange-600 text-xl"></i>',
+    CSS: '<i class="fa-brands fa-css3-alt text-blue-600 text-xl"></i>',
+    JavaScript: '<i class="fa-brands fa-js text-yellow-500 text-xl"></i>',
+    React: '<i class="fa-brands fa-react text-cyan-400 text-xl"></i>',
+    "Node.js": '<i class="fa-brands fa-node-js text-green-600 text-xl"></i>',
+    MongoDB: '<i class="fa-solid fa-database text-green-700 text-xl"></i>',
+    Python: '<i class="fa-brands fa-python text-blue-500 text-xl"></i>',
+    Java: '<i class="fa-brands fa-java text-red-600 text-xl"></i>',
+    PHP: '<i class="fa-brands fa-php text-indigo-600 text-xl"></i>',
+    C: '<i class="fa-solid fa-c text-blue-700 text-xl"></i>', // ✅ C icon
+    "C++": '<i class="fa-solid fa-code text-gray-700 text-xl"></i>',
+    SQL: '<i class="fa-solid fa-database text-purple-600 text-xl"></i>',
+    TypeScript: '<i class="fa-solid fa-code-branch text-blue-500 text-xl"></i>',
+  };
+
+  addSkillBtn.addEventListener("click", () => {
+    const skillName = prompt("Enter a skill name (e.g., Python, C, Java):");
+
+    if (skillName && skillName.trim() !== "") {
+      const newSkill = document.createElement("div");
+      newSkill.className = "flex items-center gap-2 badge badge-outline p-4";
+
+      const icon =
+        skillIcons[skillName] ||
+        '<i class="fa-solid fa-star text-yellow-500 text-xl"></i>';
+
+      newSkill.innerHTML = `${icon} ${skillName}`;
+      skillsGrid.appendChild(newSkill);
+    }
+  });
+});

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MH Shanto Portfolio</title>
+    <!-- Tailwind + DaisyUI -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-base-200" data-theme="light">
+    <!-- Navbar -->
+    <div class="navbar bg-base-100 shadow-md fixed top-0 w-full z-50">
+      <div class="flex-1">
+        <a class="btn btn-ghost normal-case text-xl"
+          ><span class="text-2xl text-amber-600">Mehedi</span> Hasan Shanto</a
+        >
+      </div>
+      <div class="flex-none">
+        <ul class="menu menu-horizontal px-1">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="themeToggle" class="btn btn-sm ml-4">🌙 Dark Mode</button>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section
+      class="hero min-h-screen bg-gradient-to-r from-indigo-500 to-purple-600 text-white flex items-center justify-center"
+    >
+      <div class="hero-content flex-col lg:flex-row text-center lg:text-left">
+        <img
+          src="./assets/st.png"
+          alt="MH Shanto"
+          class="w-50 h-40 rounded-full shadow-lg border-4 border-white"
+        />
+        <div class="lg:ml-8">
+          <h1 class="text-5xl font-bold">Me vs Me — Growing Daily</h1>
+          <h2 id="typing" class="text-xl mt-4"></h2>
+          <p class="py-6">
+            Aspiring Full‑Stack Web Developer | Skilled in JavaScript, React,
+            Node.js, MongoDB
+          </p>
+          <a
+            href="#projects"
+            class="btn bg-gradient-to-r from-yellow-400 to-orange-500 text-white"
+            >View My Work</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="p-10 bg-base-100">
+      <h2 class="text-3xl font-bold mb-4">Skills</h2>
+      <div id="skillsList" class="grid grid-cols-2 md:grid-cols-3 gap-4"></div>
+      <button id="addSkillBtn" class="btn btn-primary mt-4">Add Skill</button>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="p-10">
+      <h2 class="text-3xl font-bold mb-4">Projects</h2>
+      <div class="mb-4">
+        <button class="btn btn-outline btn-sm filter-btn" data-filter="all">
+          All
+        </button>
+        <button class="btn btn-outline btn-sm filter-btn" data-filter="web">
+          Web
+        </button>
+        <button
+          class="btn btn-outline btn-sm filter-btn"
+          data-filter="portfolio"
+        >
+          Portfolio
+        </button>
+      </div>
+      <div id="projectList" class="grid md:grid-cols-2 gap-6">
+        <div class="card bg-base-100 shadow-xl project" data-category="web">
+          <figure>
+            <img
+              src="./assets/profile.jpg"
+              alt="Job Tracker Project"
+              class="project-img"
+            />
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">Job Tracker</h3>
+            <p>A web app to track job applications.</p>
+            <div class="card-actions justify-end">
+              <a
+                href=" https://mehedi-hasan-shanto-dev.github.io/job-tracker/"
+                target="_blank"
+                class="btn btn-primary"
+                >View Project</a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="card bg-base-100 shadow-xl project"
+          data-category="portfolio"
+        >
+          <figure>
+            <img
+              src="./assets/profile2.jpg.png"
+              alt="Portfolio Project"
+              class="project-img"
+            />
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">Portfolio</h3>
+            <p>Personal portfolio showcasing my work.</p>
+            <div class="card-actions justify-end">
+              <a
+                href="https://github.com/mehedi-hasan-shanto-dev"
+                target="_blank"
+                class="btn btn-primary"
+                >View Project</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="p-10 bg-base-100">
+      <h2 class="text-3xl font-bold mb-4">Contact</h2>
+      <p>Email: mhshanto.8989.t@gmail.com</p>
+      <p>
+        GitHub:
+        <a
+          href="https://github.com/mehedi-hasan-shanto-dev"
+          target="_blank"
+          class="link link-primary"
+          >Visit GitHub</a
+        >
+      </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer footer-center p-4 bg-base-300 text-base-content">
+      <p>© 2026 MH Shanto | Built with ❤️ using Tailwind, DaisyUI & DOM API</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

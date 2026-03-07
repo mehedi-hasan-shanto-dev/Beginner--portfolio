@@ -24,3 +24,10 @@ html {
 .animate-fadeIn {
   animation: fadeIn 1s ease forwards;
 }
+
+.project-img {
+  width: 100%;
+  height: 200px; /* fixed height for consistency */
+  object-fit: cover; /* crop/scale nicely */
+  border-radius: 0.5rem; /* optional rounded corners */
+}

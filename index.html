@@ -29,11 +29,13 @@
     <!-- Navbar -->
     <div class="navbar bg-base-100 shadow-md fixed top-0 w-full z-50">
       <div class="flex-1">
-        <a class="btn btn-ghost normal-case text-xl"
-          ><span class="text-2xl text-amber-600">Mehedi</span> Hasan Shanto</a
-        >
+        <a class="btn btn-ghost normal-case text-xl">
+          <span class="text-2xl text-amber-600">Mehedi</span> Hasan Shanto
+        </a>
       </div>
-      <div class="flex-none">
+
+      <!-- Desktop Menu -->
+      <div class="hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -41,6 +43,27 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
         <button id="themeToggle" class="btn btn-sm ml-4">🌙 Dark Mode</button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="dropdown lg:hidden">
+        <label tabindex="0" class="btn btn-ghost">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </label>
+        <ul
+          tabindex="0"
+          class="menu menu-sm dropdown-content mt-3 z-`1` p-2 shadow bg-base-100 rounded-box w-52"
+        >
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <button id="themeToggleMobile" class="btn btn-sm mt-2">
+              🌙 Dark Mode
+            </button>
+          </li>
+        </ul>
       </div>
     </div>
 
@@ -118,11 +141,13 @@
           Portfolio
         </button>
       </div>
+
       <div id="projectList" class="grid md:grid-cols-2 gap-6">
+        <!-- Job Tracker -->
         <div class="card bg-base-100 shadow-xl project" data-category="web">
           <figure>
             <img
-              src="./assets/profile.jpg"
+              src="./assets/job_tak.png"
               alt="Job Tracker Project"
               class="project-img"
             />
@@ -132,7 +157,7 @@
             <p>A web app to track job applications.</p>
             <div class="card-actions justify-end">
               <a
-                href=" https://mehedi-hasan-shanto-dev.github.io/job-tracker/"
+                href="https://mehedi-hasan-shanto-dev.github.io/job-tracker/"
                 target="_blank"
                 class="btn btn-primary"
                 >View Project</a
@@ -140,6 +165,8 @@
             </div>
           </div>
         </div>
+
+        <!-- Portfolio -->
         <div
           class="card bg-base-100 shadow-xl project"
           data-category="portfolio"
@@ -156,7 +183,56 @@
             <p>Personal portfolio showcasing my work.</p>
             <div class="card-actions justify-end">
               <a
-                href=" https://mehedi-hasan-shanto-dev.github.io/Beginner--portfolio/"
+                href="https://mehedi-hasan-shanto-dev.github.io/Beginner--portfolio/"
+                target="_blank"
+                class="btn btn-primary"
+                >View Project</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- GitHub Issue Tracker -->
+        <div class="card bg-base-100 shadow-xl project" data-category="web">
+          <figure>
+            <img
+              src="./assets/hub.png"
+              alt="GitHub Issue Tracker Project"
+              class="project-img"
+            />
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">GitHub Issue Tracker</h3>
+            <p>A project to manage and track GitHub issues efficiently.</p>
+            <div class="card-actions justify-end">
+              <a
+                href="https://github.com/mehedi-hasan-shanto-dev/GitHub-Issue-Tracker"
+                target="_blank"
+                class="btn btn-primary"
+                >View Project</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- English Janala -->
+        <div class="card bg-base-100 shadow-xl project" data-category="web">
+          <figure>
+            <img
+              src="./assets/janala.jpg"
+              alt="English Janala Project"
+              class="project-img"
+            />
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">English Janala</h3>
+            <p>
+              A web-based learning platform for practicing English in an
+              interactive way.
+            </p>
+            <div class="card-actions justify-end">
+              <a
+                href="https://mehedi-hasan-shanto-dev.github.io/English-Janala/"
                 target="_blank"
                 class="btn btn-primary"
                 >View Project</a
@@ -182,42 +258,47 @@
       </p>
     </section>
 
-    <!-- hire me  -->
+    <!-- Hire Me -->
     <section
       id="hireme"
       class="p-10 bg-gradient-to-r from-green-400 to-blue-500 text-white text-center"
     >
       <h2 class="text-4xl font-bold mb-4">Hire Me</h2>
-      <p class="mb-6 text-lg">
+      <p class="mb-6 text-lg max-w-2xl mx-auto">
         Looking for a passionate Junior Web Developer skilled in JavaScript,
         React, Node.js, and MongoDB? Let's collaborate to build modern,
         responsive web applications.
       </p>
-      <div class="flex justify-center gap-4">
+
+      <!-- Responsive Buttons -->
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
         <a
           href="mailto:mhshanto.8989.t@gmail.com"
-          class="btn bg-yellow-400 text-black"
-          >📧 Email Me</a
+          class="btn bg-yellow-400 text-black w-full sm:w-auto"
         >
+          📧 Email Me
+        </a>
         <a
           href="https://www.linkedin.com/in/mehedi-hasan-shanto-dev/"
           target="_blank"
-          class="btn bg-blue-700 text-white"
-          >🔗 LinkedIn</a
+          class="btn bg-blue-700 text-white w-full sm:w-auto"
         >
+          🔗 LinkedIn
+        </a>
         <a
           href="https://github.com/mehedi-hasan-shanto-dev"
           target="_blank"
-          class="btn bg-gray-800 text-white"
-          >💻 GitHub</a
+          class="btn bg-gray-800 text-white w-full sm:w-auto"
         >
-        <!-- Download CV -->
+          💻 GitHub
+        </a>
         <a
           href="assets/MH-Shanto-CV.pdf"
           download
-          class="btn bg-red-500 text-white"
-          >📄 Download CV</a
+          class="btn bg-red-500 text-white w-full sm:w-auto"
         >
+          📄 Download CV
+        </a>
       </div>
     </section>
 
